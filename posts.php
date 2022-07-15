@@ -173,7 +173,7 @@ while($getdata3=mysqli_fetch_array($select3)){
    
 <h1><?php echo $getdata3["title"];?></h1>
 <i><p><?php echo $getdata3["intro"];?></p></i>
-<p><?php echo $getdata3["post"];?></p>
+<p><?php echo nl2br($getdata3["post"]);?></p>
 
 </div></div></center>
 <br>
@@ -200,7 +200,7 @@ while($getdata3=mysqli_fetch_array($select3)){
     </td>
 </tr><tr><td colspan="2">
 
-<textarea rows="10" cols="50" placeholder="Write your post here" name="text" id="text" class="text" autocapitalize="on"></textarea>
+<textarea style="white-space: pre-wrap;" rows="10" cols="50" placeholder="Write your post here" name="text" id="text" class="text" autocapitalize="on"></textarea>
 <br></td></tr><tr><td colspan="2" align="right">
 <input type="submit" name="go" id="go" class="go" value="Post">
 </td>
