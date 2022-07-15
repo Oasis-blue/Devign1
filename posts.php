@@ -73,7 +73,7 @@ h2{ font-family:'Roboto', sans-serif;}
  display:grid;
  align-content:center;
  justify-content:center;
- max-width: 60%;
+ max-width: 60vw;
 }
 
 /* Heading */
@@ -88,7 +88,7 @@ h2{ font-family:'Roboto', sans-serif;}
 .view p{
  margin-top:8px;
  margin-bottom:2px;
- font-size:18px;
+ font-size:1.25rem;
  text-align:center;
 }
 
@@ -107,41 +107,43 @@ h2{ font-family:'Roboto', sans-serif;}
 
 /* Post */
 #post{
- font-size:34px;
+ font-size:2.1em;
 }
 
 /* Text */
 #text{
- font-size:20px;
+ font-size:1.25rem;
  font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;
 }
 
 /* Author */
 #author{
- font-size:20px;
+ font-size:1.25rem;
 }
 
 /* Title */
 #title{
- font-size:20px;
+ font-size:1.25rem;
 }
 /* Import Google Fonts */
 @import url("//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* Input */
 #go{
- font-size:16px;
+ font-size:1em;
  cursor: pointer;
 }
 
 /* Label */
 .do tr label{
- font-size:17px;
+ font-size:1.1em;
  font-family:'Roboto', sans-serif;
 }
 
  
-
+svg:hover{
+    opacity: 0.7;
+}
 
 
 </style>
@@ -157,7 +159,7 @@ h2{ font-family:'Roboto', sans-serif;}
 
 <br>
 <form method="post">
-change background color?<input type="color" name="color"><input type="submit" name="j"></form>
+<label for="color">Change background color?</label><input id="color" type="color" name="color"><input type="submit" name="j"></form>
 <br><br>
 <b><u><span>Recent Posts:</span></u></b>
 <br><center>
@@ -174,6 +176,8 @@ while($getdata3=mysqli_fetch_array($select3)){
 <h1><?php echo $getdata3["title"];?></h1>
 <i><p><?php echo $getdata3["intro"];?></p></i>
 <p><?php echo nl2br($getdata3["post"]);?></p>
+<p><i>Likes:</i><?php echo $getdata3["likes"];?> <a title="like this post" href="like.php?sn=<?php echo $getdata3["sn"];?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z"/></svg></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a title="delete this post" href="postdel.php?sn=<?php echo $getdata3["sn"];?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg></a>
 
 </div></div></center>
 <br>

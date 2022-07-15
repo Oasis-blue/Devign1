@@ -33,7 +33,7 @@ ul li{
 ul .rig a{
     font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
     Font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125;
     padding-right:25px;
  position:relative;
  left:600px;
