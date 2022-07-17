@@ -36,7 +36,7 @@ ul .rig a{
     font-size: 1.125;
     padding-right:25px;
  position:relative;
- left:600px;
+ left:580px;
  color:#ffffff;
 }
 ul .rig a:hover{opacity:0.7;
@@ -119,6 +119,196 @@ align-items: center;}
 
 width:50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Link */
+.nav .rig a{
+ left:414px;
+}
+
+@media (max-width:1200px){
+
+ /* Link */
+ .nav .rig a{
+  left:262px;
+ }
+ 
+}
+
+@media (max-width:1126px){
+
+ /* Link */
+ .nav .rig a{
+  left:202px;
+ }
+ 
+ /* Image */
+ .nav a img{
+  width:143px;
+  height:40px;
+ }
+ 
+}
+
+@media (max-width:1029px){
+
+ /* Link */
+ .nav .rig a{
+  left:151px;
+ }
+ 
+}
+
+@media (max-width:918px){
+
+ /* Link */
+ .nav .rig a{
+  left:138px;
+ }
+ 
+}
+
+@media (max-width:872px){
+
+ /* Link */
+ .nav .rig a{
+  left:108px;
+ }
+ 
+}
+
+@media (max-width:850px){
+
+ /* Link */
+ .nav .rig a{
+  left:334px;
+  top:30px;
+ }
+ 
+ /* Image */
+ .nav a img{
+  transform:translatex(-9px) translatey(24px);
+  position:absolute;
+ }
+ 
+}
+
+@media (max-width:826px){
+
+ /* Link */
+ .nav .rig a{
+  left:279px;
+ }
+ 
+}
+
+@media (max-width:700px){
+
+ /* Link */
+ .nav .rig a{
+  top:64px;
+  left:160px;
+ }
+ 
+ /* Image */
+ .nav a img{
+  transform:translatex(237px) translatey(13px);
+ }
+ 
+}
+
+@media (max-width:603px){
+
+ /* Image */
+ .nav a img{
+  transform:translatex(189px) translatey(12px);
+ }
+ 
+ /* Link */
+ .nav .rig a{
+  left:50px;
+ }
+ 
+}
+
+@media (max-width:577px){
+
+ /* Paragraph */
+ .cl p{
+  transform:translatex(47px) translatey(21px);
+ }
+ 
+ /* Heading */
+ .cle h1{
+  transform:translatex(61px) translatey(0px);
+ }
+ 
+ /* Link */
+ .nav .rig a{
+  left:7px;
+ }
+ 
+ /* Image */
+ .nav a img{
+  transform:translatex(112px) translatey(10px);
+ }
+ 
+}
+
+@media (max-width:441px){
+
+ /* Link */
+ .nav .rig a{
+  display:block;
+  top:76px;
+ }
+ 
+ /* Menu */
+ .nav{
+  min-height:92px;
+ }
+ 
+ /* Menu (hover) */
+ .nav:hover{
+  min-height:178px;
+ }
+ 
+ /* Link (hover) */
+ .nav .rig a:hover{
+  display:inline-block;
+ }
+ 
+}
+
+@media (max-width:392px){
+
+ /* Link */
+ .nav .rig a{
+  display:inline-block;
+  left:-5px;
+  top:64px;
+  font-size:13px;
+ }
+ 
+ /* Image */
+ .nav a img{
+  transform:translatex(85px) translatey(9px);
+ }
+ 
+}
 </style>
 
 
@@ -129,6 +319,8 @@ width:50%;
 <a href=""  ><img src="logo.png" alt="logo" class="b"></a></li>
 
 
+<li class="rig"><a href="roll.php" class="aa">Roll Call</a></li>
+<li class="rig"><a href="/tools.php" class="aa">Tools</a></li>
 <li class="rig"><a href="" class="aa">Contact us</a></li>
 <li class="rig"><a href="posts.php" class="aa">Posts</a></li>
 <li class="rig"><a href="rem.php" class="aa">Tasks</a></li>
