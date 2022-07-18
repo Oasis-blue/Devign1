@@ -16,13 +16,13 @@ $date="$d of $dd.";
 $t=date("H");
 
 $tt=$t-1;
-/*
+
 if($tt<12){
     $a="am";
-}else{$a="pm";}*/
+}else{$a="pm";}
 $te=date("H");
 $tte=$te-1;
-$ttt=date(":ia");
+$ttt=date(":i");
 $time=$tte.$ttt.$a;
 
 
