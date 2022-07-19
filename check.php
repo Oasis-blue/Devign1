@@ -28,7 +28,7 @@ $selectdate=mysqli_query($connection,"select * from roll.date")
 while($getdate=mysqli_fetch_array($selectdate)){
     $dateid=$getdate['dateid'];
     $datee=$getdate['date'];
-    echo "<a href=checkd.php?date=$dateid>$datee</a>";
+    echo "<a href=checkd.php?date=$dateid>$datee</a><br>";
 }
 
 

@@ -27,17 +27,17 @@ $time=$tte.$ttt.$a;
 
 $date=$_GET['date'];
 
-$check=mysqli_query($connection, "select * from roll.date where date='$date'");
+$check=mysqli_query($connection, "select * from roll.date where dateid='$date'");
 $fetch=mysqli_fetch_assoc($check);
 $data=$fetch['dateid'];
 $gere=mysqli_query($connection,"select * from roll.call where dateid='$data'");
 
 $gera=mysqli_fetch_assoc($gere);
 $timee=$gera['time'];
-
+$da=$fetch['date'];
 
 if(mysqli_num_rows($check)>0){
-$head="<h1>Roll call for $date submitted at $timee.</h1>
+$head="<h1>Roll call for $da submitted at $timee of that day.</h1>
 ";
 
 }else{
