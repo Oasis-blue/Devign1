@@ -6,7 +6,40 @@ $connection=mysqli_connect("localhost", "root", "mysql", "roll");
 $selectusers=mysqli_query($connection,"select * from roll.users")
 ;
 
+if(isset($_GET["date"])){
 
+
+$date=$_GET["date"];
+    
+    
+    
+    $check=mysqli_query($connection, "select * from roll.date where date='$date'");
+    $fetch=mysqli_fetch_assoc($check);
+    $data=$fetch['dateid'];
+    $gere=mysqli_query($connection,"select * from roll.call where dateid='$data'");
+    
+    $gera=mysqli_fetch_assoc($gere);
+    $timee=$gera['time'];
+    
+    
+    if(mysqli_num_rows($check)>0){
+    $head="<h1>Roll call for $date submitted at $timee.</h1>
+    ";}else{
+
+        $head="<h1>Record does not exist.</h1>
+        ";
+    }
+
+}
+
+
+
+
+
+
+
+
+if(!isset($_GET["date"])){
 
 $d=date("l, jS");
 
@@ -48,7 +81,7 @@ $head="<h1>Roll call for today $date already submitted at $timee.</h1>
 
   
     
-
+}
 
 
 ?>

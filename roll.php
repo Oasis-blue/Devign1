@@ -191,7 +191,7 @@ $data=$fetch['dateid'];
 
 
 
-
+header("Location:rolln.php");
 }
 }
 
