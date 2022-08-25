@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$connection=mysqli_connect("localhost", "root", "mysql", "roll");
+$connection=mysqli_connect("localhost", "root", "", "roll");
 
 $selectusers=mysqli_query($connection,"select * from roll.users")
 ;
@@ -159,7 +159,7 @@ name="<?php
 
 
 
-if($_POST['submit']!=""){
+if(isset($_POST['submit'])){
     
 
     if(mysqli_num_rows($check)>0){}else{

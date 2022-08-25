@@ -1,10 +1,10 @@
 
 <?php
 //create a variable for database connection
-$connection = mysqli_connect("localhost", "root", "mysql", "task");
+$connection = mysqli_connect("localhost", "root", "", "task");
 
 
-$task = $_POST["task"];
+$task = $_POST["task"] ?? "";
 
 
 $querycc= mysqli_query($connection,"select*from task.task where task='$task'");
@@ -12,7 +12,7 @@ $querycc= mysqli_query($connection,"select*from task.task where task='$task'");
 
 
 
-if($_POST["submit"]!=""){
+if(isset($_POST["submit"])){
     if($_POST["task"]!="")
     
     {       if($querycc && mysqli_num_rows($querycc) > 0){//start2c
@@ -262,7 +262,7 @@ svg:hover{opacity: 0.5;}
 <div class="formholder" id="todo">
     <p><u><b>To-do list</b></u>  <a id="favbtn" style="text-decoration: none; cursor:pointer; margin-left: 5px;">My favorites</a></p>
     <br>
-    <p><?php echo $msgerr; ?></p>
+    <p><?php echo $msgerr ?? ""; ?></p>
 <form method="POST">
 
 <input type="text" placeholder="Add a task" name="task"> <input type="submit" name="submit" value="+">

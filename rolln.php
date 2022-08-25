@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$connection=mysqli_connect("localhost", "root", "mysql", "roll");
+$connection=mysqli_connect("localhost", "root", "", "roll");
 
 $selectusers=mysqli_query($connection,"select * from roll.users")
 ;
@@ -56,7 +56,7 @@ if($tt<12){
 $te=date("H");
 $tte=$te-1;
 $ttt=date(":ia");
-$time=$tte.$ttt.$a;
+$time=$tte.$ttt.($a ?? "");
 
 
 

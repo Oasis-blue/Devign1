@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$connection=mysqli_connect("localhost", "root", "mysql", "roll");
+$connection=mysqli_connect("localhost", "root", "", "roll");
 
 $selectdate=mysqli_query($connection,"select * from roll.date")
 ;

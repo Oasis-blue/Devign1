@@ -1,8 +1,9 @@
 <?php
 
-if($_POST['j']!=""){
+if(isset($_POST['j'])){
     $color=$_POST['color'];
 }
+$color=$color ?? "";
 if($color=='#000000'){
     $color1='white';
 }
@@ -12,8 +13,8 @@ $m=date(':i a');
 $time=$h.$m;
 $date=date('l, jS');
 $date2=date('F, Y');
-$connection=mysqli_connect("localhost","root","mysql","post");
-if($_POST['go']!=""){
+$connection=mysqli_connect("localhost","root","","post");
+if(isset($_POST['go'])){
 
 
     $author=$_POST['author'];
@@ -163,14 +164,14 @@ svg:hover{
 <br><br>
 <b><u><span>Recent Posts:</span></u></b>
 <br><center>
-<?php echo $nopost;  ?></center>
+<?php echo $nopost ?? "";  ?></center>
 <?php
 while($getdata3=mysqli_fetch_array($select3)){
 
 ?>
 
 <center>
-    <div style="background-color: <?php echo $getdata3["color"];?>">
+    <div style="background-color: <?php echo $getdata3["color"] ?? "";?>">
 <div class="view">
    
 <h1><?php echo $getdata3["title"];?></h1>

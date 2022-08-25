@@ -1,6 +1,6 @@
 <?php
 
-$connection=mysqli_connect("localhost","root","mysql","task");
+$connection=mysqli_connect("localhost","root","","task");
 
 
 $sn=$_GET["sn"];
